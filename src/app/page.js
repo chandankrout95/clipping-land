@@ -2,6 +2,17 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import PermIdentityOutlined from "@mui/icons-material/PermIdentityOutlined";
+import AttachMoneyOutlined from "@mui/icons-material/AttachMoneyOutlined";
+import PeopleAltOutlined from "@mui/icons-material/PeopleAltOutlined";
+import FileCopyOutlined from "@mui/icons-material/FileCopyOutlined";
+import DangerousOutlined from "@mui/icons-material/DangerousOutlined";
+import FileUploadOutlined from "@mui/icons-material/FileUploadOutlined";
+import RocketLaunchOutlined from "@mui/icons-material/RocketLaunchOutlined";
+import EditNoteOutlined from "@mui/icons-material/EditNoteOutlined";
+import BarChartOutlined from "@mui/icons-material/BarChartOutlined";
+import PlayCircleOutlineOutlined from "@mui/icons-material/PlayCircleOutlineOutlined";
+
 
 export default function Home() {
   const [liveViews, setLiveViews] = useState(182000000);
@@ -53,17 +64,127 @@ export default function Home() {
   };
 
   const clientCards = [
-    { name: "Alex Hormozi Clips", niche: "Business", avatar: "AH", color: "#f59e0b", before: "14K", after: "44K", avgViews: "4.5K", reach: "1.8M" },
-    { name: "Iman Gadzhi Clips", niche: "Business", avatar: "IG", color: "#3b82f6", before: "22K", after: "78K", avgViews: "6.2K", reach: "2.3M" },
-    { name: "Andrew Tate Clips", niche: "Motivation", avatar: "AT", color: "#ef4444", before: "18K", after: "65K", avgViews: "5.1K", reach: "1.9M" },
-    { name: "Hamza Clips", niche: "Self Improvement", avatar: "HC", color: "#10b981", before: "11K", after: "39K", avgViews: "3.2K", reach: "1.2M" },
-    { name: "Luke Belmar Clips", niche: "Crypto & Wealth", avatar: "LB", color: "#8b5cf6", before: "9K", after: "35K", avgViews: "2.8K", reach: "980K" },
-    { name: "Patrick Bet-David", niche: "Entrepreneurship", avatar: "PB", color: "#06b6d4", before: "32K", after: "110K", avgViews: "7.4K", reach: "3.1M" },
-    { name: "Tristan Tate Clips", niche: "Lifestyle", avatar: "TT", color: "#ec4899", before: "16K", after: "52K", avgViews: "4.1K", reach: "1.5M" },
-    { name: "Gary Vee Clips", niche: "Marketing", avatar: "GV", color: "#f97316", before: "45K", after: "130K", avgViews: "8.9K", reach: "4.2M" },
-    { name: "Jordan Peterson", niche: "Psychology", avatar: "JP", color: "#14b8a6", before: "28K", after: "88K", avgViews: "5.7K", reach: "2.6M" },
-    { name: "Joe Rogan Clips", niche: "Podcast", avatar: "JR", color: "#a855f7", before: "55K", after: "180K", avgViews: "12K", reach: "5.8M" },
-    { name: "Chris Bumstead", niche: "Fitness", avatar: "CB", color: "#22c55e", before: "19K", after: "61K", avgViews: "3.9K", reach: "1.7M" },
+    {
+      name: "Alex Hormozi Clips",
+      niche: "Business",
+      avatar: "AH",
+      color: "#f59e0b",
+      before: "14K",
+      after: "44K",
+      avgViews: "4.5K",
+      reach: "1.8M",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Iman Gadzhi Clips",
+      niche: "Business",
+      avatar: "IG",
+      color: "#3b82f6",
+      before: "22K",
+      after: "78K",
+      avgViews: "6.2K",
+      reach: "2.3M",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Andrew Tate Clips",
+      niche: "Motivation",
+      avatar: "AT",
+      color: "#ef4444",
+      before: "18K",
+      after: "65K",
+      avgViews: "5.1K",
+      reach: "1.9M",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Hamza Clips",
+      niche: "Self Improvement",
+      avatar: "HC",
+      color: "#10b981",
+      before: "11K",
+      after: "39K",
+      avgViews: "3.2K",
+      reach: "1.2M",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Luke Belmar Clips",
+      niche: "Crypto & Wealth",
+      avatar: "LB",
+      color: "#8b5cf6",
+      before: "9K",
+      after: "35K",
+      avgViews: "2.8K",
+      reach: "980K",
+      image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Patrick Bet-David",
+      niche: "Entrepreneurship",
+      avatar: "PB",
+      color: "#06b6d4",
+      before: "32K",
+      after: "110K",
+      avgViews: "7.4K",
+      reach: "3.1M",
+      image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Tristan Tate Clips",
+      niche: "Lifestyle",
+      avatar: "TT",
+      color: "#ec4899",
+      before: "16K",
+      after: "52K",
+      avgViews: "4.1K",
+      reach: "1.5M",
+      image: "https://images.unsplash.com/photo-1480429370139-e0132c086e2a?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Gary Vee Clips",
+      niche: "Marketing",
+      avatar: "GV",
+      color: "#f97316",
+      before: "45K",
+      after: "130K",
+      avgViews: "8.9K",
+      reach: "4.2M",
+      image: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Jordan Peterson",
+      niche: "Psychology",
+      avatar: "JP",
+      color: "#14b8a6",
+      before: "28K",
+      after: "88K",
+      avgViews: "5.7K",
+      reach: "2.6M",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Joe Rogan Clips",
+      niche: "Podcast",
+      avatar: "JR",
+      color: "#a855f7",
+      before: "55K",
+      after: "180K",
+      avgViews: "12K",
+      reach: "5.8M",
+      image: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&fit=crop&auto=format&q=80"
+    },
+    {
+      name: "Chris Bumstead",
+      niche: "Fitness",
+      avatar: "CB",
+      color: "#22c55e",
+      before: "19K",
+      after: "61K",
+      avgViews: "3.9K",
+      reach: "1.7M",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&fit=crop&auto=format&q=80"
+    }
   ];
 
   const handleViewsChange = (e) => {
@@ -79,22 +200,35 @@ export default function Home() {
   return (
     <div className="relative w-full overflow-hidden pb-20">
       {/* Ambient Glows */}
-      <div className="absolute top-[5%] left-[5%] w-[400px] h-[400px] rounded-full bg-primary/12 blur-[120px] pointer-events-none z-0" />
-      <div className="absolute top-[45%] right-[5%] w-[500px] h-[500px] rounded-full bg-primary-accent/10 blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-[5%] left-[5%] w-[400px] h-[400px] rounded-full bg-blue-200/40 blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-[45%] right-[5%] w-[500px] h-[500px] rounded-full bg-indigo-200/30 blur-[120px] pointer-events-none z-0" />
+
 
       {/* ─── TOP STATS BAR ─── */}
-      <section className="bg-surface/40 border-b border-white/[0.03] backdrop-blur-lg py-4 relative z-10">
-        <div className="max-w-[1280px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+      <section className="py-6 flex justify-center items-center relative z-10">
+        {/* Unified Bounding Card Container */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-0 bg-slate-50 border border-black/[0.07] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] rounded-2xl px-8 py-4 w-full max-w-[700px] mx-4">
           {[
             { icon: "M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zm14 10v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75", label: "Active Clippers", value: fmt(clippersCount) },
             { icon: "M13 10V3L4 14h7v7l9-11h-7z", label: "Campaigns Running", value: "97" },
             { icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z", label: "Views Generated", value: fmt(liveViews) },
           ].map((s, i) => (
             <React.Fragment key={i}>
-              {i > 0 && <div className="hidden sm:block w-px h-4 bg-white/10" />}
-              <div className="flex items-center gap-2.5 text-[0.95rem] text-text-secondary">
-                <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="text-primary"><path d={s.icon} /></svg>
-                <span><strong className="text-white">{s.value}</strong> {s.label}</span>
+              {/* Divider line between elements */}
+              {i > 0 && <div className="hidden sm:block w-px h-10 bg-black/[0.07]" />}
+
+              {/* Stat block */}
+              <div className="flex items-center gap-4 w-full sm:w-auto justify-start sm:px-6 first:pl-0 last:pr-0">
+                {/* Circular Icon Badge */}
+                <div className="flex items-center justify-center w-11 h-11 rounded-full bg-blue-50 text-primary shrink-0">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d={s.icon} /></svg>
+                </div>
+
+                {/* Text alignment: figure on top, label on bottom */}
+                <div className="flex flex-col items-start leading-tight">
+                  <strong className="text-gray-900 text-[1.15rem] font-bold tracking-tight">{s.value}</strong>
+                  <span className="text-[0.75rem] text-slate-500 mt-0.5 whitespace-nowrap">{s.label}</span>
+                </div>
               </div>
             </React.Fragment>
           ))}
@@ -102,24 +236,24 @@ export default function Home() {
       </section>
 
       {/* ─── HERO ─── */}
-      <section className="pt-20 pb-12 relative z-10">
+      <section className="pt-5 pb-12 relative z-10">
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left */}
           <div className="flex flex-col items-start gap-6 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide bg-amber-500/10 text-amber-400 border border-amber-500/20">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide bg-amber-50 text-amber-600 border border-amber-200">
               ⭐ The Clipping Army That Scales Businesses
             </div>
-            <h1 className="text-[2.75rem] lg:text-[4rem] font-extrabold leading-[1.1] tracking-tight text-white font-display">
+            <h1 className="text-[2.75rem] lg:text-[4rem] font-extrabold leading-[1.1] tracking-tight text-gray-900 font-display">
               We Scale Your <br />Business With <br /><span className="gradient-text">Clipping</span>
             </h1>
-            <p className="text-lg max-w-[480px] text-text-secondary">
+            <p className="text-lg max-w-[480px] text-slate-500">
               Launch one campaign and instantly activate thousands of clippers posting your content across multiple platforms.
             </p>
-            <div className="flex flex-col xs:flex-row gap-4 w-full">
-              <Link href="/book-call" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white bg-gradient-to-r from-primary to-primary-accent shadow-[0_4px_14px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.6)] transition-all duration-500">
+            <div className="flex xs:flex-row gap-4 w-full">
+              <Link href="/book-call" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-[12px] font-semibold text-white bg-gradient-to-r from-primary to-primary-accent shadow-[0_4px_14px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.6)] transition-all duration-500">
                 Book A Call
               </Link>
-              <Link href="/results" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white bg-white/[0.03] border border-white/10 backdrop-blur hover:-translate-y-0.5 hover:bg-white/[0.08] hover:border-white/25 transition-all duration-500">
+              <Link href="/results" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-[12px] font-semibold text-gray-700 bg-white border border-black/[0.1] hover:-translate-y-0.5 hover:border-black/20 hover:shadow-md transition-all duration-500">
                 See Results
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
               </Link>
@@ -142,16 +276,16 @@ export default function Home() {
               </div>
 
               {/* Phone */}
-              <div className="absolute left-1/2 -translate-x-1/2 w-[230px] sm:w-[250px] h-[450px] sm:h-[480px] bg-[#0b0f19] border-[12px] border-[#1a2035] rounded-[36px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7),0_0_40px_rgba(37,99,235,0.15)] overflow-hidden z-2">
+              <div className="absolute left-1/2 -translate-x-1/2 w-[230px] sm:w-[250px] h-[450px] sm:h-[480px] bg-[#0b0f19] border-[12px] border-[#1a2035] rounded-[36px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4),0_0_30px_rgba(37,99,235,0.1)] overflow-hidden z-2">
                 <div className="w-full h-full flex flex-col bg-[#07090e]">
                   <div className="h-10 bg-[#111422] flex items-center justify-center relative border-b border-white/5">
                     <div className="absolute top-0 w-[70px] h-3.5 bg-[#1a2035] rounded-b-xl" />
-                    <span className="text-[0.75rem] font-bold text-text-secondary mt-2.5">FlexNScale App</span>
+                    <span className="text-[0.75rem] font-bold text-slate-400 mt-2.5">FlexNScale App</span>
                   </div>
                   <div className="p-5 flex flex-col gap-4 flex-1">
-                    <span className="text-[0.65rem] uppercase text-text-muted tracking-wide">Campaign Overview</span>
+                    <span className="text-[0.65rem] uppercase text-slate-500 tracking-wide">Campaign Overview</span>
                     <span className="text-[1.6rem] font-extrabold text-white font-display">182,280,000</span>
-                    <div className="bg-white/[0.02] rounded-xl p-2 border border-white/5">
+                    <div className="bg-white/[0.04] rounded-xl p-2 border border-white/5">
                       <svg width="100%" height="80" viewBox="0 0 100 50">
                         <path d="M0 45 Q 20 20, 40 35 T 80 10 T 100 5 L 100 50 L 0 50 Z" fill="url(#pgGrad)" opacity="0.4" />
                         <path d="M0 45 Q 20 20, 40 35 T 80 10 T 100 5" stroke="#3b82f6" strokeWidth="3" fill="none" />
@@ -159,12 +293,12 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className="flex gap-2">
-                      <div className="flex-1 bg-white/[0.03] rounded-lg p-2 flex flex-col gap-1">
-                        <span className="text-[0.55rem] text-text-secondary">Clipping Army</span>
+                      <div className="flex-1 bg-white/[0.05] rounded-lg p-2 flex flex-col gap-1">
+                        <span className="text-[0.55rem] text-slate-400">Clipping Army</span>
                         <strong className="text-[0.9rem] text-white">16,082</strong>
                       </div>
-                      <div className="flex-1 bg-white/[0.03] rounded-lg p-2 flex flex-col gap-1">
-                        <span className="text-[0.55rem] text-text-secondary">Active Now</span>
+                      <div className="flex-1 bg-white/[0.05] rounded-lg p-2 flex flex-col gap-1">
+                        <span className="text-[0.55rem] text-slate-400">Active Now</span>
                         <div className="flex items-center gap-1 bg-success/10 px-1.5 py-0.5 rounded text-[0.55rem] text-success font-bold w-fit">
                           <span className="live-dot" /><span>Live</span>
                         </div>
@@ -182,10 +316,10 @@ export default function Home() {
               </div>
 
               {/* Live feed card */}
-              <div className="glass-card absolute -bottom-[5%] -left-[15%] w-[200px] !p-3.5 z-10 !rounded-[14px] shadow-[0_15px_30px_rgba(0,0,0,0.5)]">
+              <div className="glass-card absolute -bottom-[5%] -left-[15%] w-[200px] !p-3.5 z-10 !rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                 <div className="flex items-center gap-1.5 mb-2">
                   <span className="live-dot" />
-                  <span className="text-[0.75rem] font-bold text-white">Live Activity</span>
+                  <span className="text-[0.75rem] font-bold text-gray-800">Live Activity</span>
                 </div>
                 <div className="flex flex-col gap-2">
                   {activities.map((a) => (
@@ -194,8 +328,8 @@ export default function Home() {
                         {platformIconSmall(a.platform)}
                       </div>
                       <div className="flex flex-col">
-                        <p className="text-[0.65rem] text-text-secondary leading-tight">{a.text}</p>
-                        <span className="text-[0.55rem] text-text-muted">{a.time}</span>
+                        <p className="text-[0.65rem] text-slate-500 leading-tight">{a.text}</p>
+                        <span className="text-[0.55rem] text-slate-400">{a.time}</span>
                       </div>
                     </div>
                   ))}
@@ -207,297 +341,525 @@ export default function Home() {
       </section>
 
       {/* ─── VIEWS BANNER ─── */}
-      <section className="py-16 relative z-10">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <div className="glass-card flex flex-col items-center justify-center gap-6 text-center !p-12 bg-gradient-to-br from-card to-bg-main/80">
-            <div className="flex items-center gap-2 bg-primary/[0.08] border border-primary/20 px-3.5 py-1.5 rounded-full">
-              <span className="live-dot" />
-              <span className="text-xs font-bold text-primary uppercase tracking-wide">Live Views Generated</span>
+      <section className="pt-8 relative z-10 flex justify-center items-center">
+        {/* Main Outer Card */}
+        <div className="w-full max-w-[1150px] mx-4 bg-slate-50 border-b border-black/[0.07]  rounded-3xl p-8 flex flex-col items-center relative">
+
+          {/* Floating Top Badge */}
+          <div className="absolute -top-3.5 flex items-center gap-2 bg-white border border-black/[0.08] px-3.5 py-1 rounded-full shadow-md">
+            <span className="text-[0.7rem] font-medium text-slate-500">Live Views</span>
+            <div className="flex items-center gap-1.5 ml-1 border-l border-black/[0.07] pl-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-[0.65rem] font-bold text-emerald-600 tracking-wider uppercase">LIVE</span>
             </div>
-            <h2 className="text-4xl md:text-[5rem] font-extrabold font-display tracking-tight bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent leading-tight">
-              {fmt(liveViews)}+
-            </h2>
-            <div className="w-full border-t border-white/5 mt-8 pt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { val: "1.2B+", label: "Views", icon: "M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
-                { val: "14M+", label: "Followers Gained", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" },
-                { val: "984+", label: "Viral Posts", icon: "M19 9l-7 7-7-7" },
-              ].map((s, i) => (
-                <div key={i} className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/[0.08] border border-primary/15 flex items-center justify-center text-primary">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d={s.icon} /></svg>
-                  </div>
-                  <div className="text-left">
-                    <h3 className="text-2xl font-extrabold text-white font-display">{s.val}</h3>
-                    <p className="text-sm text-text-secondary">{s.label}</p>
-                  </div>
-                </div>
-              ))}
+          </div>
+
+          {/* Section Title */}
+          <span className="text-[0.75rem] font-bold text-slate-400 tracking-tight mt-2 mb-1">
+            Live Views Generated
+          </span>
+
+          {/* Giant Number Display */}
+          <h2 className="text-5xl md:text-7xl font-extrabold font-display tracking-tight text-primary mb-8">
+            {fmt(liveViews)}+
+          </h2>
+
+          {/* Bottom Sub-Cards Grid */}
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            {/* Card 1: Views */}
+            <div className="bg-slate-50 border border-black/[0.05] rounded-2xl p-5 flex items-center gap-4 w-full">
+              <div className="w-14 h-14 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <PlayCircleOutlineOutlined style={{ fontSize: 34 }} />
+              </div>
+              <div className="flex flex-col items-start leading-tight">
+                <h3 className="text-[1.8rem] font-bold text-gray-900 tracking-tight">1.2B+</h3>
+                <p className="text-[0.8rem] font-bold text-slate-500 mt-0.5">Views</p>
+              </div>
             </div>
+
+            {/* Card 2: Followers Gained */}
+            <div className="bg-slate-50 border border-black/[0.05] rounded-2xl p-5 flex items-center gap-4 w-full">
+              <div className="w-14 h-14 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <PeopleAltOutlined style={{ fontSize: 34 }} />
+              </div>
+              <div className="flex flex-col items-start leading-tight">
+                <h3 className="text-[1.8rem] font-bold text-gray-900 tracking-tight">14M+</h3>
+                <p className="text-[0.8rem] font-bold text-slate-500 mt-0.5 whitespace-nowrap">Followers Gained</p>
+              </div>
+            </div>
+
+            {/* Card 3: Viral Posts */}
+            <div className="bg-slate-50 border border-black/[0.05] rounded-2xl p-5 flex items-center gap-4 w-full">
+              <div className="w-14 h-14 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <RocketLaunchOutlined style={{ fontSize: 34 }} />
+              </div>
+              <div className="flex flex-col items-start leading-tight">
+                <h3 className="text-[1.8rem] font-bold text-gray-900 tracking-tight">984+</h3>
+                <p className="text-[0.8rem] font-bold text-slate-500 mt-0.5">Viral Posts</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
+
       {/* ─── RESULTS COOKED ─── */}
-      <section className="py-20 relative z-10">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-white font-display">Results <span className="text-primary">Cooked</span> 🔥</h2>
-            <p className="text-text-secondary mt-3 max-w-[600px] mx-auto">Real creators. Real growth. Every single result verified and documented.</p>
+      <section className="pt-10 relative z-10 select-none">
+        <div className="max-w-[1350px] mx-auto px-6">
+          {/* Heading */}
+          <div className="text-center mb-6">
+            <h2 className="text-[32px] md:text-[38px] font-black text-[#1e293b] tracking-tight">
+              Results <span className="text-[#2563eb]">Cooked</span> 🔥
+            </h2>
           </div>
 
-          {/* Horizontal scroll container */}
-          <div className="relative">
-            {/* Left arrow */}
+          {/* Horizontal Slider Layout Container */}
+          <div className="relative max-w-[1320px] mx-auto">
+
+            {/* Left Navigation Arrow */}
             <button
-              onClick={() => { const el = document.getElementById('results-scroll'); if (el) el.scrollBy({ left: -320, behavior: 'smooth' }); }}
-              className="absolute -left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md text-white flex items-center justify-center hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300 z-20 shadow-lg"
+              onClick={() => { const el = document.getElementById('results-scroll'); if (el) el.scrollBy({ left: -340, behavior: 'smooth' }); }}
+              className="absolute -left-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-slate-200/80 text-slate-600 flex items-center justify-center hover:bg-slate-50 hover:scale-105 active:scale-95 transition-all z-20 shadow-[0_4px_12px_rgba(0,0,0,0.05)]"
             >
-              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" /></svg>
+              <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
             </button>
 
-            {/* Scrollable row */}
+            {/* Scrollable Wrapper */}
             <div
               id="results-scroll"
-              className="flex gap-5 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory"
+              className="flex gap-4 overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory px-2"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {clientCards.map((card, idx) => (
-                <div key={idx} className="glass-card !p-6 flex flex-col gap-4 min-w-[280px] max-w-[300px] shrink-0 snap-start hover:border-primary/30 transition-all duration-300">
+                <div
+                  key={idx}
+                  className="bg-slate-50 border border-slate-100 rounded-[22px] p-5 flex flex-col gap-5 min-w-[325px] max-w-[335px] shrink-0 snap-start shadow-[0_8px_24px_rgba(0,0,0,0.015)]"
+                >
+                  {/* Header: User Profile Details */}
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style={{ backgroundColor: card.color }}>{card.avatar}</div>
-                    <div className="min-w-0">
-                      <h4 className="text-sm font-bold text-white truncate">{card.name}</h4>
-                      <span className="text-xs text-text-muted">Niche: {card.niche}</span>
+                    <div className="w-[52px] h-[52px] rounded-full overflow-hidden shrink-0 ring-2 ring-slate-100/50">
+                      <img
+                        src={card.image || "/avatar-fallback.png"}
+                        alt={card.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="min-w-0 flex flex-col">
+                      <h4 className="text-[15px] font-black text-[#0f172a] tracking-tight truncate">
+                        {card.name}
+                      </h4>
+                      <span className="text-[11px] font-medium text-slate-400 mt-0.5">
+                        Niche: {card.niche}
+                      </span>
                     </div>
                   </div>
-                  <div className="grid grid-cols-[1fr_auto_1fr] items-center bg-white/[0.015] border border-white/[0.03] rounded-xl p-4 gap-2">
-                    <div className="flex flex-col items-center text-center">
-                      <span className="text-[0.6rem] uppercase text-text-muted tracking-wide">Before</span>
-                      <strong className="text-xl font-extrabold text-white font-display">{card.before}</strong>
-                      <span className="text-[0.65rem] text-text-secondary">Followers</span>
+
+                  {/* Split Data Container: Main Split metrics box row */}
+                  <div className="grid grid-cols-2  rounded-xl gap-2 relative">
+
+                    {/* Left Segment: Before Data Metrics */}
+                    <div className="flex flex-col bg-white border border-[#e8f7ee] rounded-2xl p-4 gap-4 pl-5">
+                      <div className="flex flex-col">
+                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Before</span>
+                        <strong className="text-[26px] font-black text-[#1e293b] tracking-tight leading-none">
+                          {card.before}
+                        </strong>
+                        <span className="text-[11px] font-semibold text-slate-400 mt-1">Followers</span>
+                      </div>
+
+                      <div className="flex flex-col pt-2">
+                        <strong className="text-[18px] font-extrabold text-[#1e293b] tracking-tight leading-none">
+                          {card.avgViews}
+                        </strong>
+                        <span className="text-[11px] font-semibold text-slate-400 mt-1">Avg Views</span>
+                      </div>
                     </div>
-                    <span className="text-lg font-bold text-success">→</span>
-                    <div className="flex flex-col items-center text-center">
-                      <span className="text-[0.6rem] uppercase text-success tracking-wide">After</span>
-                      <strong className="text-xl font-extrabold text-success font-display">{card.after}</strong>
-                      <span className="text-[0.65rem] text-text-secondary">Followers</span>
+
+                    {/* Absolute Central Arrow Indicator */}
+                    <div className="absolute left-1/2 top-4 -translate-x-1/2 flex items-center justify-center pointer-events-none text-slate-300">
+                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      </svg>
                     </div>
-                  </div>
-                  <div className="flex justify-between border-t border-white/5 pt-3">
-                    <div className="flex flex-col"><span className="text-xs text-text-secondary">Avg Views</span><strong className="text-sm font-display text-white">{card.avgViews}</strong></div>
-                    <div className="flex flex-col items-end"><span className="text-xs text-text-secondary">Reach</span><strong className="text-sm font-display text-success">{card.reach}</strong></div>
+
+                    {/* Right Segment: After Tinted Container */}
+                    <div className="flex flex-col bg-[#f4fbf7] border border-[#e8f7ee] rounded-2xl p-4 gap-4 pl-5">
+                      <div className="flex flex-col">
+                        <span className="text-[11px] font-bold text-[#16a34a] uppercase tracking-wider mb-2">After</span>
+                        <strong className="text-[26px] font-black text-[#16a34a] tracking-tight leading-none flex items-center gap-1">
+                          {card.after}
+                          <span className="text-xs text-[#16a34a] font-black">↗</span>
+                        </strong>
+                        <span className="text-[11px] font-semibold text-[#16a34a]/80 mt-1">Followers</span>
+                      </div>
+
+                      <div className="flex flex-col pt-1">
+                        <strong className="text-[18px] font-extrabold text-[#16a34a] tracking-tight leading-none">
+                          {card.reach}
+                        </strong>
+                        <span className="text-[11px] font-semibold text-[#16a34a]/80 mt-1">Reach</span>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Right arrow */}
+            {/* Right Navigation Arrow */}
             <button
-              onClick={() => { const el = document.getElementById('results-scroll'); if (el) el.scrollBy({ left: 320, behavior: 'smooth' }); }}
-              className="absolute -right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md text-white flex items-center justify-center hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300 z-20 shadow-lg"
+              onClick={() => { const el = document.getElementById('results-scroll'); if (el) el.scrollBy({ left: 340, behavior: 'smooth' }); }}
+              className="absolute -right-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-slate-200/80 text-slate-600 flex items-center justify-center hover:bg-slate-50 hover:scale-105 active:scale-95 transition-all z-20 shadow-[0_4px_12px_rgba(0,0,0,0.05)]"
             >
-              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+              <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
             </button>
+
           </div>
         </div>
       </section>
 
       {/* ─── PROBLEM vs SOLUTION ─── */}
-      <section className="py-20 relative z-10">
-        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Problem */}
-          <div className="glass-card flex flex-col items-start gap-5">
-            <span className="text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded bg-danger/10 text-danger">The Problem 😢</span>
-            <h3 className="text-2xl font-bold text-white">Why Your Main Account <br /><span className="text-danger">Isn&apos;t Scaling</span></h3>
-            <div className="flex flex-wrap items-center justify-between gap-3 w-full mt-4">
-              {[
-                { label: "One Account", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" },
-                { label: "$100K+ Spent", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
-                { label: "1-2 Editors", icon: "M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" },
-                { label: "3-6 Clips/Wk", icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
-              ].map((s, i) => (
-                <React.Fragment key={i}>
-                  <div className="flex flex-col items-center text-center gap-2">
-                    <div className="w-12 h-12 rounded-full bg-white/[0.02] border border-white/[0.08] flex items-center justify-center text-text-secondary">
-                      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d={s.icon} /></svg>
-                    </div>
-                    <span className="text-[0.7rem] text-text-secondary max-w-[70px]">{s.label}</span>
-                  </div>
-                  {i < 3 && <span className="text-text-muted font-bold hidden sm:block">&rarr;</span>}
-                </React.Fragment>
-              ))}
+      <section className="pt-10 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          {/* LEFT: The Problem */}
+          <div className="relative bg-slate-50 border border-black/[0.06] rounded-[20px] p-8 flex flex-col gap-6 shadow-[0_2px_16px_rgba(0,0,0,0.05)] overflow-hidden">
+
+            {/* Red gradient background glow */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,80,80,0.08)_0%,transparent_70%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,100,100,0.05)_0%,transparent_60%)] pointer-events-none" />
+
+            {/* Badge */}
+            <span className="text-[11px] font-semibold tracking-wide text-slate-500 flex items-center gap-1 relative z-10">
+              The Problem 😢
+            </span>
+
+            {/* Heading */}
+            <h3 className="text-[22px] font-extrabold text-gray-900 leading-snug relative z-10">
+              Why Your Main Account<br />
+              <span className="text-red-500">Isn't Scaling</span>
+            </h3>
+
+            {/* Steps Row */}
+            <div className="flex items-center justify-between gap-2 mt-2 flex-wrap relative z-10">
+
               <div className="flex flex-col items-center text-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-danger/10 border border-danger/30 flex items-center justify-center text-danger">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" /></svg>
+                <div className="w-14 h-14 rounded-2xl bg-white border border-black/[0.07] flex items-center justify-center text-slate-600 shadow-sm">
+                  <PermIdentityOutlined style={{ fontSize: 26 }} />
                 </div>
-                <span className="text-[0.7rem] text-danger font-bold">No Results!</span>
+                <span className="text-[11px] text-slate-500 font-medium leading-tight">One<br />Account</span>
               </div>
+
+              <span className="text-slate-300 text-lg font-bold">→</span>
+
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="w-14 h-14 rounded-2xl bg-white border border-black/[0.07] flex items-center justify-center text-slate-600 shadow-sm">
+                  <AttachMoneyOutlined style={{ fontSize: 26 }} />
+                </div>
+                <span className="text-[11px] text-slate-500 font-medium leading-tight">$100K+<br />Spent On Ads</span>
+              </div>
+
+              <span className="text-slate-300 text-lg font-bold">→</span>
+
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="w-14 h-14 rounded-2xl bg-white border border-black/[0.07] flex items-center justify-center text-slate-600 shadow-sm">
+                  <PeopleAltOutlined style={{ fontSize: 26 }} />
+                </div>
+                <span className="text-[11px] text-slate-500 font-medium leading-tight">1-2<br />Editors</span>
+              </div>
+
+              <span className="text-slate-300 text-lg font-bold">→</span>
+
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="w-14 h-14 rounded-2xl bg-white border border-black/[0.07] flex items-center justify-center text-slate-600 shadow-sm">
+                  <FileCopyOutlined style={{ fontSize: 26 }} />
+                </div>
+                <span className="text-[11px] text-slate-500 font-medium leading-tight">3-6<br />Clips Per Week</span>
+              </div>
+
+              <span className="text-red-400 text-lg font-bold">→</span>
+
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="w-14 h-14 rounded-full bg-red-500 border border-red-600 flex items-center justify-center text-white shadow-md">
+                  <DangerousOutlined style={{ fontSize: 30 }} />
+                </div>
+                <span className="text-[11px] text-red-500 font-bold leading-tight">No<br />Results!</span>
+              </div>
+
             </div>
           </div>
 
-          {/* Solution */}
-          <div className="glass-card flex flex-col items-start gap-5">
-            <span className="text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded bg-success/10 text-success">The Solution ✅</span>
-            <h3 className="text-2xl font-bold text-white">The <span className="text-primary">FlexNScale</span> Strategy</h3>
-            <div className="flex flex-wrap items-center justify-between gap-4 w-full mt-4">
-              {[
-                { label: "You Send Content", icon: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" },
-                { label: "Campaign Launch", icon: "M12 19l9 2-9-18-9 18 9-2zm0 0v-8" },
-                { label: "Clippers Edit", icon: "M14.121 14.121L19 19m-4.879-4.879l1.414-1.414M12 6.002V4m0 2.002a2 2 0 110 4M12 6.002a2 2 0 100 4m0 0V20" },
-                { label: "Traffic Flows", icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6", highlight: true },
-              ].map((s, i) => (
-                <div key={i} className="flex flex-col items-center text-center gap-2 relative">
-                  <span className="absolute -top-1.5 -right-1.5 w-[18px] h-[18px] bg-primary rounded-full text-[0.65rem] font-bold flex items-center justify-center text-white">{i + 1}</span>
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-success border ${s.highlight ? "border-success bg-success/10 shadow-[0_0_15px_rgba(16,185,129,0.2)]" : "border-success/20 bg-success/[0.02]"}`}>
-                    <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d={s.icon} /></svg>
-                  </div>
-                  <span className={`text-[0.7rem] max-w-[70px] ${s.highlight ? "text-success font-bold" : "text-text-secondary"}`}>{s.label}</span>
+          {/* RIGHT: The Solution */}
+          {/* RIGHT: The Solution */}
+          <div className="relative bg-slate-100 border border-black/[0.06] rounded-[20px] p-8 flex flex-col gap-6 shadow-[0_2px_16px_rgba(0,0,0,0.05)] overflow-hidden">
+
+            {/* Blue gradient background glow */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.08)_0%,transparent_70%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(99,153,255,0.05)_0%,transparent_60%)] pointer-events-none" />
+
+            {/* Badge */}
+            <span className="text-[11px] font-semibold tracking-wide text-emerald-600 flex items-center gap-1 relative z-10">
+              The Solution ✅
+            </span>
+
+            {/* Heading */}
+            <h3 className="text-[26px] font-extrabold text-gray-900 leading-snug relative z-10">
+              The <span className="text-blue-600">FlexNScale</span> Strategy
+            </h3>
+
+            {/* 4 Inner Cards Row */}
+            <div className="flex items-stretch gap-3 mt-2 relative z-10">
+
+              {/* Curved arrow SVG underneath
+              <svg className="absolute -bottom-2 left-0 w-full h-8 pointer-events-none z-0" viewBox="0 0 400 30" fill="none" preserveAspectRatio="none">
+                <path d="M10 15 Q120 40 200 15 Q280 -10 390 15" stroke="#60a5fa" strokeWidth="2" strokeDasharray="0" fill="none" markerEnd="url(#arrowBlue)" />
+                <defs>
+                  <marker id="arrowBlue" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                    <path d="M0 0 L6 3 L0 6 Z" fill="#60a5fa" />
+                  </marker>
+                </defs>
+              </svg> */}
+
+              {/* Step 1 */}
+              <div className="flex-1 relative bg-slate-50 border border-black/[0.06] rounded-[16px] p-4 flex flex-col justify-between min-h-[160px] overflow-hidden shadow-sm">
+                <div className="flex flex-col gap-2">
+                  <span className="w-6 h-6 bg-blue-600 rounded-full text-white text-[11px] font-bold flex items-center justify-center">1</span>
+                  <span className="text-[13px] text-slate-800 font-semibold leading-snug mt-1">You Send<br />Content</span>
                 </div>
-              ))}
+                <div className="absolute bottom-3 right-3 text-blue-500 opacity-90">
+                  <FileUploadOutlined style={{ fontSize: 38 }} />
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex-1 relative bg-slate-50 border border-black/[0.06] rounded-[16px] p-4 flex flex-col justify-between min-h-[160px] overflow-hidden shadow-sm">
+                <div className="flex flex-col gap-2">
+                  <span className="w-6 h-6 bg-blue-600 rounded-full text-white text-[11px] font-bold flex items-center justify-center">2</span>
+                  <span className="text-[13px] text-slate-800 font-semibold leading-snug mt-1">Campaign<br />Launch</span>
+                </div>
+                <div className="absolute bottom-3 right-3 text-blue-500 opacity-90">
+                  <RocketLaunchOutlined style={{ fontSize: 38 }} />
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex-1 relative bg-slate-50 border border-black/[0.06] rounded-[16px] p-4 flex flex-col justify-between min-h-[160px] overflow-hidden shadow-sm">
+                <div className="flex flex-col gap-2">
+                  <span className="w-6 h-6 bg-blue-600 rounded-full text-white text-[11px] font-bold flex items-center justify-center">3</span>
+                  <span className="text-[13px] text-slate-800 font-semibold leading-snug mt-1">Clippers<br />Edit & Post</span>
+                </div>
+                <div className="absolute bottom-3 right-3 text-blue-500 opacity-90">
+                  <EditNoteOutlined style={{ fontSize: 38 }} />
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex-1 relative bg-slate-50 border border-black/[0.06] rounded-[16px] p-4 flex flex-col justify-between min-h-[160px] overflow-hidden shadow-sm">
+                <div className="flex flex-col gap-2">
+                  <span className="w-6 h-6 bg-blue-600 rounded-full text-white text-[11px] font-bold flex items-center justify-center">4</span>
+                  <span className="text-[13px] text-slate-800 font-semibold leading-snug mt-1">Traffic<br />Flows To You</span>
+                </div>
+                <div className="absolute bottom-3 right-3 text-blue-500 opacity-90">
+                  <BarChartOutlined style={{ fontSize: 38 }} />
+                </div>
+              </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
       {/* ─── CLIPPING ARMY ─── */}
-      <section className="py-20 relative z-10">
-        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded bg-white/5 text-text-secondary">The Clipping Army</span>
-            <h2 className="text-4xl font-extrabold text-white font-display mt-4">
-              <span className="text-blue-500" style={{ textShadow: "0 0 20px rgba(59,130,246,0.3)" }}>{fmt(clippersCount)}</span> <br />Active Clippers Ready To Hunt Views
-            </h2>
-            <div className="flex items-center gap-4 mt-6 mb-8">
-              <div className="flex">
-                {["#3b82f6", "#ec4899", "#10b981", "#f59e0b"].map((c, i) => (
-                  <div key={i} className="w-[38px] h-[38px] rounded-full border-2 border-bg-main -ml-2.5 first:ml-0" style={{ background: c }} />
-                ))}
-                <div className="w-[38px] h-[38px] rounded-full bg-primary border-2 border-bg-main flex items-center justify-center text-[0.7rem] font-bold text-white -ml-2.5">+{fmt(clippersCount)}</div>
-              </div>
-              <span className="text-sm text-text-secondary font-medium">Trained. Verified. Ready.</span>
-            </div>
-            {/* Silhouette SVG */}
-            <div className="bg-white/[0.01] border border-white/[0.03] rounded-3xl overflow-hidden mt-4">
-              <svg width="100%" height="220" viewBox="0 0 500 220" fill="none" className="block">
-                <path d="M150 220 C150 160 170 140 200 140 C230 140 250 160 250 220" fill="rgba(15,23,42,0.4)" />
-                <path d="M250 220 C250 160 270 140 300 140 C330 140 350 160 350 220" fill="rgba(15,23,42,0.4)" />
-                <path d="M80 220 C80 150 100 130 130 130 C160 130 180 150 180 220" fill="rgba(15,23,42,0.6)" />
-                <path d="M320 220 C320 150 340 130 370 130 C400 130 420 150 420 220" fill="rgba(15,23,42,0.6)" />
-                <path d="M180 220 C180 130 210 110 250 110 C290 110 320 130 320 220 Z" fill="#0f172a" stroke="rgba(255,255,255,0.05)" strokeWidth="2" />
-                <path d="M250 110 L250 40 M250 40 L310 55 L250 70" stroke="#fff" strokeWidth="3" fill="#2563eb" strokeLinecap="round" />
-                <path d="M120 220 C120 140 145 120 180 120 C215 120 240 140 240 220 Z" fill="#0b0f19" />
-                <path d="M260 220 C260 140 285 120 320 120 C355 120 380 140 380 220 Z" fill="#0b0f19" />
-              </svg>
-            </div>
-          </div>
+      <section className="pt-10 w-full">
+        <div className="max-w-[1400px] mx-auto px-6">
 
-          {/* Features */}
-          <div className="flex items-center justify-center">
-            <div className="flex flex-col gap-6 w-full">
-              {[
-                { title: "Trained Clippers", desc: "Experts in creating viral hooks, retentions, and trending edits.", color: "bg-primary/10 text-blue-400" },
-                { title: "Multi-Platform Posting", desc: "Covers TikTok, Instagram Reels, and YouTube Shorts simultaneously.", color: "bg-purple-500/10 text-purple-400" },
-                { title: "AI-Powered System", desc: "Hooks optimization, audio synchronization, and visual enhancements.", color: "bg-cyan-500/10 text-cyan-300" },
-                { title: "Real-Time Tracking", desc: "A custom user portal displaying views, clippers status, and reach metrics.", color: "bg-emerald-500/10 text-emerald-400" },
-              ].map((f, i) => (
-                <div key={i} className="glass-card flex gap-5 items-start">
-                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${f.color}`}>
-                    <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path d={["M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z", "M7 2h10a2 2 0 012 2v16a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2zM12 18h.01", "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z", "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10a2 2 0 01-2 2h-2a2 2 0 01-2-2zm9-10v10M9 21h9"][i]} />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white mb-1">{f.title}</h4>
-                    <p className="text-sm text-text-secondary">{f.desc}</p>
+          {/* Main Banner Container (Removed items-center here) */}
+          <div className="bg-slate-50/50 border-b-[2px] border-slate-200 rounded-[32px] p-8 md:p-12 pb-0 md:pb-0 grid grid-cols-1 lg:grid-cols-12 gap-3  overflow-hidden">
+
+            {/* Left Column: Metrics & Heading (Centered vertically via self-center) */}
+            <div className="lg:col-span-3 flex flex-col justify-center self-center pb-8 md:pb-12">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">
+                The Clipping Army
+              </span>
+
+              <h2 className="text-4xl font-black text-slate-900 tracking-tight leading-[1.15]">
+                <span className="text-blue-600 block mb-1">{fmt(clippersCount)}</span>
+                Active Clippers <br />
+                Ready To Hunt Views
+              </h2>
+
+              {/* Avatar Stack */}
+              <div className="flex items-center gap-3 mt-8">
+                <div className="flex -space-x-3 overflow-hidden">
+                  <img className="inline-block h-9 w-9 rounded-full ring-4 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="User 1" />
+                  <img className="inline-block h-9 w-9 rounded-full ring-4 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="User 2" />
+                  <img className="inline-block h-9 w-9 rounded-full ring-4 ring-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="User 3" />
+                  <img className="inline-block h-9 w-9 rounded-full ring-4 ring-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="User 4" />
+                  <div className="inline-block h-9 w-9 rounded-full bg-blue-600 ring-4 ring-white flex items-center justify-center text-[0.65rem] font-bold text-white">
+                    +{fmt(clippersCount)}
                   </div>
                 </div>
-              ))}
+                <span className="text-xs text-slate-400 font-semibold tracking-wide uppercase ml-1">
+                  Trained. Verified. Ready.
+                </span>
+              </div>
             </div>
+
+            {/* Center Column: Army Image Graphic (Forced flush to the absolute bottom via self-end) */}
+            <div className="lg:col-span-6 flex justify-center items-end self-end w-full">
+              <img
+                src="/army.png"
+                alt="The Clipping Army"
+                className="w-full h-auto object-contain max-h-[340px] block select-none pointer-events-none drop-shadow-md transform translate-y-px"
+              />
+            </div>
+
+            {/* Right Column: Features List (Centered vertically via self-center) */}
+            <div className="lg:col-span-3 w-full self-center pb-8 md:pb-12">
+              <div className="flex flex-col gap-1">
+                {[
+                  {
+                    title: "Trained Clippers",
+                    desc: "Experts in creating viral clips",
+                    color: "bg-blue-50 text-blue-600",
+                    path: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                  },
+                  {
+                    title: "Multi Platform Posting",
+                    desc: "3 Platforms, 3 Accounts, 3 Posts",
+                    color: "bg-indigo-50 text-indigo-600",
+                    path: "M7 4v16M17 4v16M3 8h18M3 16h18"
+                  },
+                  {
+                    title: "AI Powered System",
+                    desc: "Smart distribution & optimization",
+                    color: "bg-purple-50 text-purple-600",
+                    path: "M9.813 15.904L9 21l-1.813-5.096L2.091 15 7.188 13.187 9 8.091l1.813 5.096 5.096 1.813-5.096 1.813zM19.071 4.929a10 10 0 00-14.142 0M16.243 7.757a6 6 0 00-8.486 0"
+                  },
+                  {
+                    title: "Real Time Tracking",
+                    desc: "Live stats & performance",
+                    color: "bg-blue-50 text-blue-500",
+                    path: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10a2 2 0 01-2 2h-2a2 2 0 01-2-2zm9-10v10M9 21h9"
+                  }
+                ].map((feature, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white border border-slate-100/80 rounded-2xl p-4 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow duration-200"
+                  >
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${feature.color}`}>
+                      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d={feature.path} />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-800 leading-snug">
+                        {feature.title}
+                      </h4>
+                      <p className="text-xs text-slate-400 mt-0.5 font-medium">
+                        {feature.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* ─── HOW IT WORKS MATH ─── */}
-      <section className="py-20 relative z-10 select-none">
+      <section className="pt-10 relative z-10 select-none">
         <div className="max-w-[1400px] mx-auto px-6">
-          {/* Dark blue glass-card container */}
-          <div className="bg-[#050b18]/60 border border-white/[0.05] backdrop-blur-xl rounded-[24px] p-8 md:p-12 shadow-2xl">
+          {/* Clean Main White Container */}
+          <div className="bg-slate-50/50 border border-slate-100 rounded-[24px] p-8 md:p-12 shadow-[0_8px_32px_rgba(0,0,0,0.02)]">
 
-            <span className="text-[10px] tracking-[0.15em] font-bold uppercase px-3 py-1.5 rounded bg-white/5 text-text-secondary border border-white/5">
-              How It Works ?
-            </span>
+
 
             {/* 3-Column Grid Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-12 items-center mt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-[2.3fr_2fr_1.2fr] gap-8 xl:gap-12 items-center">
 
-              {/* LEFT COLUMN: Text Information */}
-              <div className="flex flex-col gap-6 justify-center">
-                <ul className="flex flex-col gap-4">
+              {/* LEFT COLUMN: Main Core Stats */}
+              <div className="flex flex-col gap-5 justify-center">
+                {/* Label: How It Works ? */}
+                <div className="text-[11px] tracking-[0.12em] font-bold uppercase text-slate-400 mb-8">
+                  How It Works ?
+                </div>
+                <ul className="flex flex-col gap-1">
                   {[["3", "Platforms"], ["3", "Accounts"], ["3", "Posts Per Platform"]].map(([n, l]) => (
-                    <li key={l} className="text-2xl md:text-3xl font-extrabold text-[#94a3b8] tracking-tight">
-                      <span className="text-[#06b6d4] mr-2">{n}</span>{l}
+                    <li key={l} className="text-[28px] md:text-[32px] font-black tracking-tight text-[#1e293b] line-height-[1.2]">
+                      <span className="text-[#2563eb] mr-2">{n}</span>{l}
                     </li>
                   ))}
                 </ul>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-[#06b6d4]/10 text-[#06b6d4] border border-[#06b6d4]/20 w-fit tracking-wide">
+
+                <div className="inline-flex items-center justify-center px-5 py-2.5 mt-2 rounded-xl text-xs font-bold bg-white text-[#334155] border border-slate-200/80 shadow-sm w-fit">
                   9 Posts Per Clipper
                 </div>
               </div>
 
-              {/* MIDDLE COLUMN: Two Calculation Cards */}
-              <div className="flex flex-col items-center justify-center gap-5 w-full">
+              {/* MIDDLE COLUMN: Layout Box Math Units */}
+              <div className="flex flex-col gap-4 w-full">
 
-                {/* Card 1: Platform Addition Layout */}
-                <div className="flex items-center justify-between gap-4 bg-[#0a1224]/80 border border-white/[0.05] p-5 rounded-2xl w-full max-w-[380px]">
-                  <div className="flex items-center gap-2">
+                {/* Top Row: Platforms Addition Math Row */}
+                <div className="flex items-center justify-between gap-3 bg-white rounded-2xl w-full">
+                  <div className="flex items-center gap-3">
                     {[
-                      { icon: <TikTokIcon size={16} />, bg: "bg-black", sub: "x3" },
-                      { icon: <InstagramIcon size={16} />, bg: "bg-gradient-to-br from-orange-400 via-pink-500 to-purple-600", sub: "x3" },
-                      { icon: <YouTubeIcon size={16} />, bg: "bg-red-600", sub: "x3" },
+                      { icon: <TikTokIcon size={20} />, bg: "bg-black", sub: "x3" },
+                      { icon: <InstagramIcon size={20} />, bg: "bg-gradient-to-tr from-orange-400 via-pink-500 to-purple-600", sub: "x3" },
+                      { icon: <YouTubeIcon size={20} />, bg: "bg-[#ef4444]", sub: "x3" },
                     ].map((p, i) => (
                       <React.Fragment key={i}>
-                        {i > 0 && <span className="text-xs font-bold text-slate-500 mx-0.5">+</span>}
-                        <div className="flex flex-col items-center gap-1.5 bg-[#0e1b35] border border-white/[0.03] p-2 rounded-xl min-w-[54px]">
-                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${p.bg} shadow-md`}>
+                        {i > 0 && <span className="text-lg font-bold text-slate-300/90">+</span>}
+                        <div className="flex flex-col items-center gap-2 bg-white border border-slate-100/80 p-4 rounded-2xl min-w-[76px] shadow-[0_4px_16px_rgba(0,0,0,0.02)]">
+                          <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-white ${p.bg} shadow-sm`}>
                             {p.icon}
                           </div>
-                          <span className="text-[10px] font-medium text-slate-400">{p.sub}</span>
+                          <span className="text-[11px] font-bold text-slate-400">{p.sub}</span>
                         </div>
                       </React.Fragment>
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-2 pl-2 border-l border-white/5">
-                    <span className="text-sm font-bold text-slate-500">=</span>
+                  {/* Equals Outputs Result */}
+                  <div className="flex items-center gap-3 pl-4 border-l border-slate-100">
+                    <span className="text-xl font-bold text-slate-300">=</span>
                     <div className="flex flex-col items-center">
-                      <strong className="text-xl font-black text-white">9</strong>
-                      <span className="text-[9px] uppercase tracking-wider font-bold text-slate-400">Posts</span>
+                      <strong className="text-[36px] font-black text-[#2563eb] leading-none">9</strong>
+                      <span className="text-[9px] uppercase tracking-wider font-bold text-slate-400 mt-1.5 whitespace-nowrap">Posts Per Clipper</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Card 2: Total Calculation Multiplication */}
-                <div className="flex items-center justify-between gap-4 bg-[#0a1224]/80 border border-white/[0.05] p-5 rounded-2xl w-full max-w-[380px]">
-                  <div className="flex items-center justify-start gap-4">
+                {/* Bottom Row: Core Compound Multiplication Row */}
+                <div className="flex items-center justify-between bg-[#f8fafc] border border-slate-50 p-6 rounded-2xl w-full">
+                  <div className="flex items-center gap-6">
                     <div className="flex flex-col">
-                      <strong className="text-2xl font-black text-[#3b82f6]">9</strong>
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400">Posts</span>
+                      <strong className="text-[38px] font-black text-[#2563eb] leading-none">9</strong>
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 mt-1">Posts</span>
                     </div>
-                    <span className="text-sm font-bold text-slate-500">&times;</span>
+
+                    <span className="text-md font-bold text-slate-300">&times;</span>
+
                     <div className="flex flex-col">
-                      <strong className="text-2xl font-black text-white">16,000</strong>
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400">Users</span>
+                      <strong className="text-[38px] font-black text-[#1e293b] leading-none">16,000</strong>
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 mt-1">Clippers</span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 pl-4 border-l border-white/5">
-                    <span className="text-sm font-bold text-slate-500">=</span>
-                    <div className="flex flex-col items-end">
-                      <strong className="text-2xl font-black text-[#10b981]" style={{ textShadow: "0 0 20px rgba(16,185,129,0.25)" }}>
-                        144,000
-                      </strong>
-                      <span className="text-[9px] uppercase font-bold tracking-wider text-[#10b981]/80 flex items-center gap-1">
+                  <div className="flex items-center gap-4 pl-4 border-l border-slate-200/60">
+                    <span className="text-md font-bold text-slate-300">=</span>
+                    <div className="flex flex-col items-start">
+                      <strong className="text-[38px] font-black text-[#16a34a] leading-none">144,000</strong>
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-[#16a34a] flex items-center gap-1 mt-1">
                         Clips Daily <span className="text-xs">🔥</span>
                       </span>
                     </div>
@@ -506,30 +868,18 @@ export default function Home() {
 
               </div>
 
-              {/* RIGHT COLUMN: The Globe (Protected from squishing) */}
+              {/* RIGHT COLUMN: The Interactive Globe Context Graphic */}
               <div className="flex items-center justify-center lg:justify-end w-full">
-                {/* shrink-0 and aspect-square keep it perfectly spherical */}
-                <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] shrink-0 aspect-square animate-float">
-                  {/* Glow behind globe */}
-                  <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.18)_0%,transparent70%)] blur-xl" />
+                <div className="relative w-[310px] h-[310px] sm:w-[370px] sm:h-[370px] shrink-0 aspect-square">
+                  {/* Ambient Radial Soft Light Layer - Scaled up for the larger image */}
+                  <div className="absolute inset-[-20px] rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.15)_0%,transparent_70%)] blur-3xl z-0" />
 
-                  {/* Main Globe Base */}
-                  <div className="absolute inset-[5%] rounded-full bg-[radial-gradient(circle_at_30%_30%,#1e293b,#0f172a_60%,#020617)] border border-white/[0.08] shadow-[inset_-25px_-25px_60px_rgba(0,0,0,0.9),0_0_50px_rgba(37,99,235,0.1)] flex items-center justify-center overflow-visible">
-
-                    {/* Dot Grid Layer */}
-                    <div className="absolute inset-0 rounded-full bg-[radial-gradient(rgba(255,255,255,0.05)_1.5px,transparent_1.5px)] bg-[length:16px_16px] opacity-70" />
-
-                    {/* Dynamic Floating Badges */}
-                    <span className="absolute top-[28%] -left-[12%] bg-[#0f172a]/80 border border-white/10 backdrop-blur-md px-3 py-1.5 rounded-xl text-xs font-bold text-white shadow-xl flex items-center gap-2 transition-transform hover:scale-105">
-                      <TikTokIcon size={12} /> TikTok
-                    </span>
-                    <span className="absolute top-[52%] -translate-y-1/2 -left-[16%] bg-[#0f172a]/80 border border-white/10 backdrop-blur-md px-3 py-1.5 rounded-xl text-xs font-bold text-white shadow-xl flex items-center gap-2 transition-transform hover:scale-105">
-                      <InstagramIcon size={12} /> Instagram
-                    </span>
-                    <span className="absolute bottom-[24%] -right-[12%] bg-[#0f172a]/80 border border-white/10 backdrop-blur-md px-3 py-1.5 rounded-xl text-xs font-bold text-white shadow-xl flex items-center gap-2 transition-transform hover:scale-105">
-                      <YouTubeIcon size={12} /> YouTube
-                    </span>
-                  </div>
+                  {/* Custom Image Resource asset wrapper */}
+                  <img
+                    src="/glove.png"
+                    alt="Global Distribution"
+                    className="w-full h-full object-contain relative z-10 filter drop-shadow-[0_16px_48px_rgba(37,99,235,0.14)]"
+                  />
                 </div>
               </div>
 
@@ -539,72 +889,191 @@ export default function Home() {
       </section>
 
       {/* ─── PRICING / RPM CALCULATOR ─── */}
-      <section className="py-20 relative z-10">
-        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="flex flex-col gap-6 items-start">
-            <span className="text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded bg-white/5 text-text-secondary">Pricing</span>
-            <h2 className="text-[2.5rem] font-extrabold text-white font-display leading-tight">You Only <br /><span className="text-primary">Pay For Results</span></h2>
-            <ul className="flex flex-col gap-4 mt-4">
-              {["No Upfront Fees", "No Long Contracts", "No Monthly Retainers"].map((p) => (
-                <li key={p} className="flex items-center gap-3 text-lg text-text-secondary font-medium">
-                  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" className="text-success"><path d="M5 13l4 4L19 7" /></svg>
-                  {p}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="glass-card !p-10 w-full">
-            <h3 className="text-xl font-bold text-white mb-6">RPM Calculator</h3>
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-2">
-                <label htmlFor="viewsInput" className="text-sm text-text-secondary font-semibold">Enter Views</label>
-                <input id="viewsInput" type="text" value={views} onChange={handleViewsChange} placeholder="10,000" className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 text-white text-xl font-bold font-display w-full outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(37,99,235,0.2)] transition-all duration-300" />
+      <section className="pt-10 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="bg-slate-50/50 border-b-[2px] border-slate-200 rounded-[24px] px-10 py-10">
+            <div className="grid grid-cols-7 gap-10 items-center">
+
+              {/* LEFT COLUMN: 2 cols */}
+              <div className="col-span-2 flex flex-col gap-4 items-start">
+                <span className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">
+                  Pricing
+                </span>
+                <h2 className="text-[2rem] font-extrabold leading-tight text-blue-600">
+                  You Only<br />Pay For Results
+                </h2>
+                <ul className="flex flex-col gap-3 mt-2">
+                  {["No Upfront Fees", "No Long Contracts", "No Monthly Retainers"].map((p) => (
+                    <li key={p} className="flex items-center gap-2.5 text-[15px] text-slate-700 font-medium">
+                      <span className="w-5 h-5 rounded bg-blue-600 flex items-center justify-center shrink-0">
+                        <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                          <path d="M2 6l3 3 5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      {p}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="flex flex-col gap-1 bg-primary/[0.04] border border-primary/15 p-5 rounded-xl">
-                <span className="text-sm text-text-secondary">Estimated Payout</span>
-                <strong className="text-4xl font-extrabold text-blue-500 font-display" style={{ textShadow: "0 0 20px rgba(59,130,246,0.35)" }}>${payout.toFixed(2)}</strong>
-              </div>
-              <div className="flex justify-between items-center gap-4 border-t border-white/5 pt-6">
-                <div><h5 className="text-[0.95rem] text-white font-semibold">How It Works?</h5><p className="text-sm text-text-secondary">We get you views. You get paid. It&apos;s that simple.</p></div>
-                <div className="relative w-20 h-[60px] shrink-0">
-                  <div className="absolute bottom-2.5 left-2.5 w-8 h-2.5 rounded-full bg-amber-500 border border-amber-600 shadow-[0_3px_0_#92400e]" />
-                  <div className="absolute bottom-[22px] left-5 w-8 h-2.5 rounded-full bg-amber-500 border border-amber-600 shadow-[0_3px_0_#92400e]" />
-                  <div className="absolute bottom-1.5 right-1.5 w-9 h-9 rounded-[50%_50%_40%_40%] bg-success text-white text-sm font-extrabold flex items-center justify-center border border-emerald-600 rotate-[10deg]">$$</div>
+              {/* MIDDLE COLUMN: 3 cols */}
+              <div className="col-span-3 bg-slate-50 border-b border-black/[0.08] rounded-[20px] border-slate-200 p-7 flex flex-col gap-5 relative overflow-hidden">
+                <h3 className="text-[17px] font-bold text-gray-900">RPM Calculator</h3>
+
+                {/* Views Input */}
+                <div className="flex flex-col gap-1.5 w-[55%]">
+                  <label className="text-[12px] font-semibold text-slate-500">Enter Views</label>
+                  <input
+                    type="text"
+                    value={views}
+                    onChange={handleViewsChange}
+                    placeholder="10,000"
+                    className="border border-black/[0.1] rounded-xl px-4 py-3 text-gray-900 text-[15px] font-semibold w-full outline-none focus:border-blue-400 transition-all bg-white"
+                  />
+                </div>
+
+                {/* Estimated Payout */}
+                <div className="flex flex-col gap-1 w-[55%]">
+                  <span className="text-[12px] font-semibold text-slate-500">Estimated Payout</span>
+                  <strong className="text-[32px] font-extrabold text-blue-600 leading-tight">
+                    ${payout.toFixed(2)}
+                  </strong>
+                </div>
+
+                {/* Money image — bottom right overflow */}
+                <div className="absolute bottom-0 right-0 w-[220px] h-[220px] pointer-events-none">
+                  <img
+                    src="/money.png"
+                    alt="Money"
+                    className="w-full h-full object-contain object-bottom"
+                  />
                 </div>
               </div>
+
+              {/* RIGHT COLUMN: 2 cols */}
+              <div className="col-span-2 flex flex-col gap-3 pl-4 relative overflow-hidden min-h-[200px]">
+                <span className="text-[12px] font-semibold text-slate-400">How It Works?</span>
+                <div className="flex flex-col gap-1">
+                  <p className="text-[20px] font-bold text-gray-900 leading-snug">We get you views.</p>
+                  <p className="text-[20px] font-bold text-gray-900 leading-snug">You get paid.</p>
+                  <p className="text-[20px] font-bold text-gray-900 leading-snug">It's that simple.</p>
+                </div>
+
+                {/* Giant dollar watermark — right side, partially cropped */}
+                <div className="absolute -right-8 top-1/2 -translate-y-1/2 pointer-events-none">
+                  <svg width="220" height="220" viewBox="0 0 24 24" fill="none" className="opacity-[0.08]">
+                    <path
+                      d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"
+                      stroke="#2563eb"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </section>
 
       {/* ─── CTA BANNER ─── */}
-      <section className="py-20 relative z-10">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <div className="relative bg-[radial-gradient(circle_at_50%_0%,#1e3a8a_0%,#060814_80%)] border border-primary/30 rounded-[32px] px-8 py-16 text-center flex flex-col items-center gap-6 overflow-hidden">
+      <section className="py-2 relative z-10 select-none">
+        <div className="max-w-[1400px] mx-auto px-6">
+          {/* Wrapper */}
+          <div className="relative pt-[100px] overflow-hidden">
+
             {/* Rocket */}
-            <div className="absolute top-5 right-10 opacity-20 md:opacity-85 pointer-events-none animate-float">
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2S4.5 7.5 4.5 13c0 2.25 1.5 4.5 3.5 5.5l1-1c-1-.5-2.25-2.25-2.25-4.5 0-3.5 4.25-8.25 5.25-9.25 1 1 5.25 5.75 5.25 9.25 0 2.25-1.25 4-2.25 4.5l1 1c2-1 3.5-3.25 3.5-5.5C19.5 7.5 12 2 12 2z" fill="url(#rGrad)" />
-                <path d="M12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="#fff" />
-                <path d="M9.5 19.5c.5.5.5 1.5 0 2s-1.5.5-2 0l-1-1 3-1zM14.5 19.5c-.5.5-.5 1.5 0 2s1.5.5 2 0l1-1-3-1z" fill="#f59e0b" />
-                <defs><linearGradient id="rGrad" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stopColor="#60a5fa" /><stop offset="1" stopColor="#2563eb" /></linearGradient></defs>
-              </svg>
+            <div className="absolute right-[0px] top-[-150px] h-[500px] w-[340px] md:w-[420px] lg:w-[460px] pointer-events-none z-[999]">
+              <img
+                src="/rocket.png"
+                alt="Rocket Scaling Blast off"
+                className="w-full h-full object-contain object-bottom scale-110 origin-bottom-right"
+              />
             </div>
-            <span className="text-sm font-bold text-blue-400 uppercase tracking-wide">Ready To Scale Like Never Before?</span>
-            <h2 className="text-[2.5rem] md:text-[3.5rem] font-extrabold text-white font-display">Start Scaling Today ⚡</h2>
-            <p className="text-lg max-w-[580px] text-text-secondary">Join 16,000+ creators who are already scaling their businesses with the power of the Clipping Army.</p>
-            <Link href="/book-call" className="mt-4 inline-flex items-center gap-2 px-10 py-4 rounded-full font-semibold text-lg text-white bg-gradient-to-r from-primary to-primary-accent shadow-[0_4px_14px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.6)] transition-all duration-500">
-              Book A Call Now
-              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            </Link>
-            <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-              <div className="flex">
-                {["#3b82f6", "#ec4899", "#10b981", "#f59e0b"].map((c, i) => (
-                  <div key={i} className="w-6 h-6 rounded-full border-[1.5px] border-[#07090e] -ml-1.5 first:ml-0" style={{ background: c }} />
-                ))}
-                <div className="w-6 h-6 rounded-full bg-primary border-[1.5px] border-[#07090e] text-[0.55rem] font-bold flex items-center justify-center text-white -ml-1.5">+{fmt(clippersCount)}</div>
+
+            {/* Main Container */}
+            <div className="relative w-full bg-[#090d16] border border-white/[0.05]  rounded-[24px] px-8 md:px-14 py-10 flex flex-col md:flex-row items-center justify-start gap-6 shadow-[0_12px_40px_rgba(0,0,0,0.2)]">
+
+              {/* LEFT SIDE */}
+              <div className="flex flex-col gap-2 max-w-[600px] z-10 text-left">
+                <span className="text-[13px] font-semibold text-slate-400 tracking-wide">
+                  Ready To Scale Like Never Before?
+                </span>
+
+                <h2 className="text-[32px] md:text-[44px] font-black text-white tracking-tight flex items-center gap-3 leading-tight">
+                  Start Scaling Today <span className="text-amber-400">⚡</span>
+                </h2>
+
+                <p className="text-[14px] text-slate-400 leading-relaxed max-w-[480px] mt-1">
+                  Join 16,000+ creators who are already scaling their businesses with
+                  the power of the Clipping Army.
+                </p>
               </div>
-              <span className="text-sm text-text-secondary font-medium">Creators Trust FlexNScale</span>
+              {/* Vertical Divider */}
+              <div className="hidden md:flex relative mx-12 self-stretch shrink-0 items-center">
+                {/* Glow */}
+                <div className="absolute left-1/2 -translate-x-1/2 w-[3px] h-24 bg-white/20 blur-md" />
+
+                {/* Line */}
+                <div className="w-px h-full bg-gradient-to-b from-transparent via-white/30 to-transparent" />
+              </div>
+              {/* RIGHT SIDE */}
+              <div className="flex flex-col pl-20 items-start md:items-center gap-4 z-10">
+                {/* CTA */}
+                <a
+                  href="/book-call"
+                  className="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-bold text-[15px] text-white bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors duration-300 shadow-lg min-w-[260px] justify-center"
+                >
+                  Book A Call Now
+
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    className="ml-1"
+                  >
+                    <path
+                      d="M6 12L10 8L6 4"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+
+                {/* Social Proof */}
+                <div className="flex flex-col items-start md:items-center gap-2">
+                  <div className="flex items-center">
+                    <div className="flex -space-x-2 mr-2">
+                      {[
+                        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&fit=crop&auto=format&q=80",
+                        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&fit=crop&auto=format&q=80",
+                        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&fit=crop&auto=format&q=80",
+                        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&fit=crop&auto=format&q=80",
+                      ].map((src, i) => (
+                        <img
+                          key={i}
+                          src={src}
+                          alt="Creator Avatar"
+                          className="w-6 h-6 rounded-full border-2 border-[#090d16] object-cover"
+                        />
+                      ))}
+
+                      <div className="h-6 px-2 rounded-full bg-slate-800 border-2 border-[#090d16] text-[10px] font-bold flex items-center justify-center text-slate-300">
+                        +16082
+                      </div>
+                    </div>
+                  </div>
+
+                  <span className="text-[11px] text-slate-400 font-semibold tracking-wide uppercase">
+                    Creators Trust FlexNScale
+                  </span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
